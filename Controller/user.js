@@ -23,11 +23,10 @@ const createUser = async (req,res)=>{
         console.log(error);
     }
 }
-
+ 
 const getusers=async(req,res)=>{
     try {
         const data=await userSchema.find()
-
         if(!data){
             return res.status(404).json({
                 status:'fail',
